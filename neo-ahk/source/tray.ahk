@@ -9,7 +9,6 @@ TrayAktivieren() {
     menu,helpmenu,add,Autohotkey-Hilfe,help
     menu,helpmenu,add
     menu,helpmenu,add,http://autohotkey.com/,autohotkey
-    menu,helpmenu,add,http://www.nordtast.org/,nordtast
     menu,helpmenu,add,http://www.neo-layout.org/,neo
   menu,tray,add,Hilfe,:helpmenu
   menu,tray,add
@@ -42,10 +41,6 @@ return
 
 neo:
   run http://neo-layout.org/
-return
-
-nordtast:
-  run http://www.nordtast.org/
 return
 
 autohotkey:
