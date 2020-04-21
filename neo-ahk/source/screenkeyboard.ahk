@@ -259,6 +259,7 @@ CharProc__BST1() {
 
   GuiAddKey("space",264,168)
   GuiAddKeySM("138",430,168)
+  GuiAddKeySM("115",520,168)
 
   GuiAddKeyS("145",582,9)
   GuiAddKeyS("135",620,9)

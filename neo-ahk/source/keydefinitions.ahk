@@ -111,6 +111,7 @@ ED1S("03A","P__M3LD") ; Mod3L (CapsLock)
 ED1S("02B","P__M3RD") ; Mod3R (#')
 ED1S("056","P__M4LD") ; Mod4L (<>)
 ED1S("138","P__M4RD") ; Mod4R (AltGr)
+ED1S("115","P__M4RD") ; Mod4R (RControl RCtrl)
 }
 
 SetKeyPos(pos,char) {
@@ -379,6 +380,7 @@ Layout00000407() {
   RSC("02B","BF") ; M3R
   RSC("056","E2") ; M4L
   RSC("138","A5") ; M4R
+  RSC("115","A3") ; M4R  Mod4R (RControl RCtrl)
 
   /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
    **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
@@ -592,6 +594,7 @@ Layout00000807() {
   RSC("02B","DF") ; M3R
   RSC("056","E2") ; M4L
   RSC("138","A5") ; M4R
+  RSC("115","A3") ; M4R  Mod4R (RControl RCtrl)
 
   /**** die meisten der folgenden Shortcuts werden von AHK zwar verarbeitet,
    **** von dort aber nur als ALT+Numpad verschickt und daher nicht für alle
