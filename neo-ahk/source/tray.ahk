@@ -10,6 +10,7 @@ TrayAktivieren() {
     menu,helpmenu,add
     menu,helpmenu,add,http://autohotkey.com/,autohotkey
     menu,helpmenu,add,http://www.neo-layout.org/,neo
+    menu,helpmenu,add,https://gitea.neo.uber.space/neo/neo-layout/,gitea
   menu,tray,add,Hilfe,:helpmenu
   menu,tray,add
   menu,tray,add,%disable%,togglesuspend
@@ -45,6 +46,10 @@ return
 
 autohotkey:
   run http://autohotkey.com/
+return
+
+gitea:
+  run https://gitea.neo.uber.space/neo/neo-layout/	
 return
 
 open:
