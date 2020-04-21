@@ -265,14 +265,14 @@ Comp := ""
 ; RegisterAndHookSC
 RSC(sc,vk) {
   global
-  vksc%sc% := "VK" . vk . "SC" . sc
+  vksc%sc% := "VK" . vk     ; . "SC" . sc - Solution for VKDCSC029 Problem - only VK as HotKey allowed
   RKEY(vksc%sc%)
 }
 
 RSCN(sc,vk1,vk2) {
   global
-  vkscn1%sc% := "VK" . vk1 . "SC" . sc
-  vkscn2%sc% := "VK" . vk2 . "SC" . sc
+  vkscn1%sc% := "VK" . vk1 ; . "SC" . sc - Solution for VKDCSC029 Problem - only VK as HotKey allowed
+  vkscn2%sc% := "VK" . vk2 ; . "SC" . sc - Solution for VKDCSC029 Problem - only VK as HotKey allowed
   RKEY(vkscn1%sc%)
   RKEY(vkscn2%sc%)
 }
