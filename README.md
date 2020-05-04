@@ -37,9 +37,7 @@ von neo-layout.org das eingebrannte Icon.
 
 Dies kann über die Kommandozeile gemacht werden:
 
-<code>
-"c:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in neo20-all.ahk /out neo20.exe /icon neo_enabled.ico
-<code>
+    "c:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in neo20-all.ahk /out neo20.exe /icon neo_enabled.ico
 
 Pfad zur Ahk2Exe.exe kann abweichen. Bei der Choco Installation sollte er stimmen.
 
@@ -110,14 +108,3 @@ Für Mapping-Probleme bietet sich eine Modifikation der varsfunctions.ahk an.
 Nutzt man die Neo2 Scripte mittels direkter Ausführung über "Run Script",
 gelangt man über das Kontextmenü des AHK Interpreters ( in der Taskleiste ggf. versteckt) zu dem Punkt "Öffnen".
 Im AHK Fenster kann man sich unter "View -> Key history and script info" die von AHK erkannten Tasten-Events anzeigen lassen.
-
-
-
-
-
-
-
-
-
-
-
