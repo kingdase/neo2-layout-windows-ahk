@@ -21,7 +21,8 @@ IniRead,UseMod4Light,%ini%,Global,UseMod4Light,1
 IniRead,striktesMod2Lock,%ini%,Global,striktesMod2Lock,0
 IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 IniRead,NumLockOff,%ini%,Global,NumLockOff,0
-
+IniRead,RControlAsM4,%ini%,Global,RControlAsM4,0
+IniRead,NeoDebug,%ini%,Global,NeoDebug,0
 SetNEOLockStates()
 
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1
@@ -31,18 +32,18 @@ if (inputlocalealias<>"")
   inputlocale:=inputlocalealias
 
 if (inputlocale<>"00000407" and inputlocale<>"00000807" and inputlocale<>"00010407") {
-  suspend   
+  suspend
   regread,inputlocale,HKEY_LOCAL_MACHINE,SYSTEM\CurrentControlSet\Control\Keyboard Layouts\%inputlocale%,Layout Text
   msgbox, 52, Warnung!,
     (
-    Nicht kompatibles Tastaturlayout:   
-    `t%inputlocale%   
-    `nDas deutsche QWERTZ muss als Standardlayout eingestellt  
-    sein, damit %name% wie erwartet funktioniert.   
-    `nÄndern Sie die Tastatureinstellung unter 
-    `tSystemsteuerung   
-    `t-> Regions- und Sprachoptionen   
-    `t-> Sprachen 
+    Nicht kompatibles Tastaturlayout:
+    `t%inputlocale%
+    `nDas deutsche QWERTZ muss als Standardlayout eingestellt
+    sein, damit %name% wie erwartet funktioniert.
+    `nÄndern Sie die Tastatureinstellung unter
+    `tSystemsteuerung
+    `t-> Regions- und Sprachoptionen
+    `t-> Sprachen
     `t-> Details...   `n
     Trotzdem fortfahren?`n
     )

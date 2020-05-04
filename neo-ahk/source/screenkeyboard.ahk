@@ -259,7 +259,10 @@ CharProc__BST1() {
 
   GuiAddKey("space",264,168)
   GuiAddKeySM("138",430,168)
-  GuiAddKeySM("115",520,168)
+
+  if (RControlAsM4 == 1) {	; RControl as additional Meta4 key
+	GuiAddKeySM("115",520,168)
+  }
 
   GuiAddKeyS("145",582,9)
   GuiAddKeyS("135",620,9)
@@ -282,7 +285,7 @@ CharProc__BST1() {
 
   GuiAddKeySN("052",601,168)
   GuiAddKeySN("053",658,168)
-  Gui, +AlwaysOnTop +ToolWindow +Resize -MaximizeBox
+  Gui, +AlwaysOnTop +ToolWindow +Resize -MaximizeBox -DPIScale
   Gui, Show, y%yposition% w729 h199 NoActivate, Neo-Bildschirmtastatur
   BSTUpdate()
   BSTalwaysOnTop := 1
@@ -293,7 +296,7 @@ BSTToggleAlwaysOnTop() {
   global
   if (BSTalwaysOnTop) {
     Gui, -AlwaysOnTop
-    BSTalwaysOnTop := 0    
+    BSTalwaysOnTop := 0
   } else {
     Gui, +AlwaysOnTop
     BSTalwaysOnTop := 1
