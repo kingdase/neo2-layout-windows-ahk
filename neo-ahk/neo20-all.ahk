@@ -4,9 +4,6 @@ SetWorkingDir, %A_ScriptDir%
 #include %A_ScriptDir%\
 
 
-; Revision Information (don't moun)
-#include *i source\_subwcrev1.generated.ahk
-
 ; die Compose-Definitionen
 #include *i source\compose.generated.ahk
 #include *i source\compose-tainted.generated.ahk
