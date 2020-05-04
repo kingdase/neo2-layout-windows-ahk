@@ -27,8 +27,8 @@ Autohotkey installieren - 32/64 bit scheint momentan keinen Unterschied zu mache
 
 Im Windows File-Explorer das Kontextmenü zu neo20-all.ahk öffnen.
 
-- Run Script  
-- Compile      
+- Run Script
+- Compile
 
 Fehlen die Einträge im Kontextmenü wurde Authotkey nicht richtig installiert.
 
@@ -45,12 +45,10 @@ Pfad zur Ahk2Exe.exe kann abweichen. Bei der Choco Installation sollte er stimme
 
 ## neo2.ini
 
-<code>
-[Global]
-isQwertz=1
-RControlAsM4=1
-NeoDebug=0
-<code>
+    [Global]
+    isQwertz=1
+    RControlAsM4=1
+    NeoDebug=0
 
 Die initalize.ahk kennt zwei neu Optionen in neo2.ini.
 
@@ -63,26 +61,22 @@ Jeweils mit 0/1 ein- und abschaltbar
 
 Bei Eingabe von AltGr+v werden auf einem lokalen Windows folgende Tastatur-Events generiert:
 
-<code>
-A2  01D	 	d	LControl
-A5  138	 	d	RAlt
-56  02F	 	d	v
-56  02F	 	u	v
-A2  01D	 	u	LControl
-A5  138	 	u	RAlt
-<code>
+    A2  01D	 	d	LControl
+    A5  138	 	d	RAlt
+    56  02F	 	d	v
+    56  02F	 	u	v
+    A2  01D	 	u	LControl
+    A5  138	 	u	RAlt
 
 In einer entfernten Citrix Session werden folgende Tastatur-Events genereriert:
 
-<code>
-A2  01D	 	d	LControl
-A5  138	 	d	RAlt
-56  02F	 	d	v
-56  02F	 	u	v
-A2  01D	 	u	LControl
-A2  01D	 	u	LControl
-A5  138	 	u	RAlt
-<code>
+    A2  01D	 	d	LControl
+    A5  138	 	d	RAlt
+    56  02F	 	d	v
+    56  02F	 	u	v
+    A2  01D	 	u	LControl
+    A2  01D	 	u	LControl
+    A5  138	 	u	RAlt
 
 Es wird ein zusätzliches LControl up generiert.
 
@@ -96,9 +90,7 @@ Die AHK Neo Scripte sind für Control transparent, d.h. die Events werden gar ni
 
 Am einfachsten, wenn man https://chocolatey.org nutzt:
 
-<code>
-choco install autohotkey -y
-<code>
+    choco install autohotkey -y
 
 ## Debugging
 
@@ -111,16 +103,14 @@ Die Nachrichten können dann mit DebugView von Sysinternals angezeigt werden.
 
 DebugView kann zb. von Microsoft, für die PorableApps Platform oder auch über Chocolatey bezogen werden:
 
-<code>
-choco install dbgview -y
-<code>
+    choco install dbgview -y
 
 Für Mapping-Probleme bietet sich eine Modifikation der varsfunctions.ahk an.
 
 Nutzt man die Neo2 Scripte mittels direkter Ausführung über "Run Script",
 gelangt man über das Kontextmenü des AHK Interpreters ( in der Taskleiste ggf. versteckt) zu dem Punkt "Öffnen".
 Im AHK Fenster kann man sich unter "View -> Key history and script info" die von AHK erkannten Tasten-Events anzeigen lassen.
- 
+
 
 
 
