@@ -10,7 +10,8 @@ Worum geht es hier:
 - [x] Font von GitHub nehmen
 - [x] Rechte Strg-Taste als zusätzlichen Mod4 Umschalter aktivieren
 - [x] Bildschirmtastatur - Fix fuer Skalierung ; Ticket #390 und #530
-- [ ] Fix für Citrix-Problem
+- [x] Fix für Citrix-Problem
+- [ ] Neo20.exe als Release bereitstellen
 
 ## VKDCSC029 Problem
 
@@ -46,13 +47,16 @@ Pfad zur Ahk2Exe.exe kann abweichen. Bei der Choco Installation sollte er stimme
 
     [Global]
     isQwertz=1
-    RControlAsM4=1
+    RControlAsM4=0
     NeoDebug=0
+    fixCitrix=1
+    
 
 Die initalize.ahk kennt zwei neu Optionen in neo2.ini.
 
 - RControlAsM4 damit kann die rechte Ctrl Taste als zusätzlicher M4 Umschalter genutzt werden
 - NeoDebug     sendet Debug Ausgaben an DebugView
+- fixCitrix    siehe Citrix Altgr Problem
 
 Jeweils mit 0/1 ein- und abschaltbar
 
@@ -83,7 +87,10 @@ https://kb.vmware.com/s/article/1022454
 
 Die AHK Neo Scripte sind für Control transparent, d.h. die Events werden gar nicht mittels Hotkey Definition(en) verarbeitet.
 
+Der Fix macht zwei Sachen:
 
+- bei M4R Down wird ein Ctrl Up gesendet.
+- LControl Up (zwei Events) werden im Modus M4 unterdrückt
 
 ## Authotkey installieren
 
