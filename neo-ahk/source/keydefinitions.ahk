@@ -116,6 +116,37 @@ if (RControlAsM4 == 1) {
 	ED1S("115","P__M4RD") ; Mod4R (RControl RCtrl)
 }
 
+if (fixCitrix == 1) {
+  if (NeoDebug == 1) {
+    OutPutDebug NEO: fixCitrix - hotkeys for LControl UP and down
+  }
+  HotKey, LControl   , lcontrol_down
+  HotKey, LControl up, lcontrol_up
+}
+
+}
+
+lcontrol_down()
+{
+  global
+  if (NeoDebug == 1) {
+    OutPutDebug NEO:lcontrol_down isMod4RPressed %isMod4RPressed%
+  }
+  SendInput {Ctrl down}
+}
+
+lcontrol_up()
+{
+  global
+  if (NeoDebug == 1) {
+    OutPutDebug NEO:lcontrol_up isMod4RPressed %isMod4RPressed%
+  }
+  if(!isMod4RPressed) {
+    if (NeoDebug == 1) {
+      OutPutDebug NEO:lcontrol_up Send Ctrl up
+    }
+    SendInput {Ctrl up}
+  }
 }
 
 SetKeyPos(pos,char) {

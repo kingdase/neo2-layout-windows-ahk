@@ -23,7 +23,7 @@ IniRead,dynamischesCompose,%ini%,Global,dynamischesCompose,0
 IniRead,NumLockOff,%ini%,Global,NumLockOff,0
 IniRead,RControlAsM4,%ini%,Global,RControlAsM4,0
 IniRead,NeoDebug,%ini%,Global,NeoDebug,0
-IniRead,fixCitix,%ini%,Global,FixCitrix,0
+IniRead,fixCitrix,%ini%,Global,fixCitrix,0
 SetNEOLockStates()
 
 regread,inputlocale,HKEY_CURRENT_USER,Keyboard Layout\Preload,1

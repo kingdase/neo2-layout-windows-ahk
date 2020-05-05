@@ -411,6 +411,12 @@ CharProc__M4RD() {
   if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M4RD
   }
+  if (fixCitrix==1) {
+    if (NeoDebug == 1) {
+       OutPutDebug NEO:CharProc__M4RD fixCitrix
+    }
+    SendInput {Ctrl up}
+  }
   if (!isMod4RPressed) {
     isMod4RPressed := 1
     isMod4Pressed := 1
