@@ -6,10 +6,11 @@ Worum geht es hier:
 
 - [x] Neubau von neo20.exe mit einem aktuellen Autohotkey Compiler
 - [x] "Einbrennen" des Bildschirm-Tastatur Fonts
-- [ ] Hilfe mit sinnvollen Informationen
+- [x] Hilfe mit sinnvollen Informationen
 - [x] Font von GitHub nehmen
 - [x] Rechte Strg-Taste als zusätzlichen Mod4 Umschalter aktivieren
 - [x] Bildschirmtastatur - Fix fuer Skalierung ; Ticket #390 und #530
+- [ ] Fix für Citrix-Problem
 
 ## VKDCSC029 Problem
 
