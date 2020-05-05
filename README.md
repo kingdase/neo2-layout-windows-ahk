@@ -52,7 +52,7 @@ Pfad zur Ahk2Exe.exe kann abweichen. Bei der Choco Installation sollte er stimme
     fixCitrix=1
     
 
-Die initalize.ahk kennt zwei neu Optionen in neo2.ini.
+Die initalize.ahk kennt drei neue Optionen in neo2.ini.
 
 - RControlAsM4 damit kann die rechte Ctrl Taste als zusätzlicher M4 Umschalter genutzt werden
 - NeoDebug     sendet Debug Ausgaben an DebugView
