@@ -49,7 +49,7 @@ autohotkey:
 return
 
 gitea:
-  run https://gitea.neo.uber.space/neo/neo-layout/	
+  run https://gitea.neo.uber.space/neo/neo-layout/
 return
 
 open:
@@ -94,19 +94,23 @@ Traytogglesuspend() {
 
 TrayAbout() {
   global
-  msgbox, 64, %name%  Ergonomische Tastaturbelegung, 
+  msgbox, 64, %name%  Ergonomische Tastaturbelegung,
   (
-  %name% 
-  `nDas Neo-Layout ersetzt das übliche deutsche 
-  Tastaturlayout mit der Alternative Neo, 
-  beschrieben auf http://neo-layout.org/. 
-  `nDazu sind keine Administratorrechte nötig. 
-  `nWenn Autohotkey aktiviert ist, werden alle Tastendrucke 
-  abgefangen und statt dessen eine Übersetzung weitergeschickt. 
-  `nDies geschieht transparent für den Anwender, 
-  es muss nichts installiert werden. 
-  `nDie Zeichenübersetzung kann leicht über das Icon im 
-  Systemtray deaktiviert werden.  `n
+  %name%`n
+  Das Neo-Layout ersetzt das übliche deutsche
+  Tastaturlayout mit der Alternative Neo,
+  beschrieben auf http://neo-layout.org/.`n
+  Dazu sind keine Administratorrechte nötig.`n
+  Wenn Autohotkey aktiviert ist, werden alle Tastendrucke
+  abgefangen und statt dessen eine Übersetzung weitergeschickt.`n
+  Dies geschieht transparent für den Anwender,
+  es muss nichts installiert werden.`n
+  Die Zeichenübersetzung kann leicht über das Icon im
+  Systemtray deaktiviert werden.`n
+  HotKeys:`n
+  M4 + F1: Bildschirmtastatur anzeigen/ausblenden
+  M3 + F6: Wechsel zwischen Neo und QWERTZ
+  M4 + F6: Speichere Layout
   )
 }
 

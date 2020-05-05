@@ -31,15 +31,12 @@ CharProcQwerT0() {
 CharProcQwerts() {
   global
 
-  if (isQwertz == 0)
-    IniDelete,%ini%,Global,isQwertz
-  else
-    IniWrite,%isQwertz%,%ini%,Global,isQwertz
+  IniWrite,%isQwertz%,%ini%,Global,isQwertz
 
   if ErrorLevel
-    TrayTip,Qwertz-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1    
+    TrayTip,Qwertz-Belegungsvariante,Beim Speichern der Variante ist ein Fehler aufgetreten.,10,1
   else if (zeigeModusBox)
-    TrayTip,Qwertz-Belegungsvariante,Variante gespeichert.,10,1    
+    TrayTip,Qwertz-Belegungsvariante,Variante gespeichert.,10,1
 }
 
 ActivateQwertz() {

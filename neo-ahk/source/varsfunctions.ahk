@@ -30,7 +30,7 @@ AllStar(This_HotKey) {
   if (NeoDebug == 1) {
      OutPutDebug NEO:AllStar This_HotKey=>%This_HotKey%< IsDown=%IsDown% TransFormProc=>%TransformProc%< Ebene=>%Ebene%< Char=>%Char%<  wasNonShiftKeyPressed=>%wasNonShiftKeyPressed%<
   }
-  
+
   if (PressHookProc != "") {
     if (IsDown == 1)
       PressHook%PressHookProc%(PhysKey, ActKey, Char)
@@ -47,7 +47,7 @@ CharStarDown(PhysKey, ActKey, char) {
   if (NeoDebug == 1) {
      OutPutDebug NEO:CharStarDown PhysKey>%PhysKey%< ActKey>%ActKey%< char>%char%<
   }
-  
+
   if (SubStr(char,1,1)=="P") {
     SubProc := SubStr(char,2,6)
     CharProc%SubProc%()
@@ -83,7 +83,7 @@ rerun:
         CharOut(SubStr(tosend,1,7))
       }
       tosend := SubStr(tosend,8)
-      if (tosend == "") 
+      if (tosend == "")
         break                ; erledigt
     }
     Comp := ""
@@ -114,7 +114,7 @@ rerun:
         CharOut(SubStr(tosend,1,7))
       }
       tosend := SubStr(tosend,8)
-      if (tosend == "") 
+      if (tosend == "")
         break                ; erledigt
     }
   } else if (tosend != "") {
@@ -158,10 +158,10 @@ CharStarUp(PhysKey) {
 
 CharOut(char) {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharOut char>%char%<
   }
-  
+
   if (CharOutFilterProc != "") {
     char := CharOutFilter%CharOutFilterProc%(char,1,1)
     if (char == "")
@@ -177,7 +177,7 @@ CharOut(char) {
 
 CharOutDown(char) {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharOutDown char>%char%<
   }
   if (CharOutFilterProc != "") {
@@ -195,7 +195,7 @@ CharOutDown(char) {
 
 CharOutUp(char) {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharOutUp char>%char%<
   }
   if (CharOutFilterProc != "") {
@@ -214,7 +214,7 @@ CharOutUp(char) {
 
 SendBlindShiftFixed(char, theseq) {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:SendBlindShiftFixed char>%char%< theseq>%theseq%<
   }
   if (UNSH%char%)
@@ -254,7 +254,7 @@ CharProc__Rlod() {
   global
   ; Neustart des AHK-Skripts
 
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__Rlod
   }
   SetOldLockStates()
@@ -264,11 +264,11 @@ CharProc__Rlod() {
 ; Modifier
 CharProc__M2LD() {
   global
-  
+
   if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M2LD
   }
-  
+
   if (!isShiftLPressed) {
     if (isShiftRPressed and !wasNonShiftKeyPressed)
       ToggleMod2Lock()
@@ -283,7 +283,7 @@ CharProc__M2LD() {
 
 CharProc__M2LU() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M2LU
   }
   isShiftLPressed := 0
@@ -294,7 +294,7 @@ CharProc__M2LU() {
 
 CharProc__M2RD() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M2RD
   }
   if (!isShiftRPressed) {
@@ -311,7 +311,7 @@ CharProc__M2RD() {
 
 CharProc__M2RU() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M2RU
   }
   isShiftRPressed := 0
@@ -322,7 +322,7 @@ CharProc__M2RU() {
 
 CharProc__M3LD() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M3LD
   }
   if (!isMod3LPressed) {
@@ -338,7 +338,7 @@ CharProc__M3LD() {
 
 CharProc__M3LU() {
   global
-  
+
   if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M3LU
   }
@@ -368,7 +368,7 @@ CharProc__M3RD() {
 
 CharProc__M3RU() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M3RU
   }
   if (isMod3LPressed)
@@ -380,7 +380,7 @@ CharProc__M3RU() {
 
 CharProc__M4LD() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M4LD
   }
   if (!isMod4LPressed) {
@@ -408,7 +408,7 @@ CharProc__M4LU() {
 
 CharProc__M4RD() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M4RD
   }
   if (!isMod4RPressed) {
@@ -426,7 +426,7 @@ CharProc__M4RD() {
 
 CharProc__M4RU() {
   global
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:CharProc__M4RU
   }
   isMod4RPressed := 0
@@ -434,11 +434,9 @@ CharProc__M4RU() {
   %EbeneAktualisieren%()
 }
 
-
-
 SendUnicodeChar(charCode){
   static ki := "#"
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:SendUnicodeChar charCode>%charCode%<
   }
   if (ki =="#") {
@@ -465,7 +463,7 @@ SendUnicodeChar(charCode){
 
 SendUnicodeCharDown(charCode){
   static ki := "#"
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:SendUnicodeCharDown charCode>%charCode%<
   }
   if (ki =="#") {
@@ -487,7 +485,7 @@ SendUnicodeCharDown(charCode){
 
 SendUnicodeCharUp(charCode){
   static ki := "#"
-  if (NeoDebug == 1) {  
+  if (NeoDebug == 1) {
      OutPutDebug NEO:SendUnicodeCharUp charCode>%charCode%<
   }
   if (ki =="#") {
